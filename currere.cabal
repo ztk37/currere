@@ -1,0 +1,63 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.34.4.
+--
+-- see: https://github.com/sol/hpack
+
+name:           currere
+version:        0.1.0.0
+description:    Please see the README on GitHub at <https://github.com/ztk37/currere#readme>
+homepage:       https://github.com/ztk37/currere#readme
+bug-reports:    https://github.com/ztk37/currere/issues
+author:         ztk37
+maintainer:     ztk37
+copyright:      2022 ztk37 https://github.com/ztk37
+license:        MIT
+license-file:   LICENSE
+build-type:     Simple
+extra-source-files:
+    README.md
+    ChangeLog.md
+
+source-repository head
+  type: git
+  location: https://github.com/ztk37/currere
+
+library
+  exposed-modules:
+      Currere
+      Currere.Prelude
+      Currere.Run
+      Currere.Types
+  other-modules:
+      Paths_currere
+  hs-source-dirs:
+      lib
+  build-depends:
+      base >=4.7 && <5
+  default-language: Haskell2010
+
+executable currere-exe
+  main-is: Main.hs
+  other-modules:
+      Paths_currere
+  hs-source-dirs:
+      app
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      base >=4.7 && <5
+    , currere
+  default-language: Haskell2010
+
+test-suite currere-test
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  other-modules:
+      Paths_currere
+  hs-source-dirs:
+      test
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      base >=4.7 && <5
+    , currere
+  default-language: Haskell2010
