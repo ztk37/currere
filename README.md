@@ -2,7 +2,7 @@
 
 > `currere` is latin for `run`, and that's what this repository is all about. Run some Haskell.
 
-## Motivation <!-- /Purpose -->
+## Motivation
 
 > TBD
 
@@ -18,13 +18,13 @@
 
 ## Usage
 
-```
-# TBD
+```sh
+stack run
 ```
 
 ## Objectives
 
-- [ ] Run Application
+- [x] Run Application
 - [ ] Run Haddock to generate docs
 - [ ] Run HSpec for testing
 - [ ] Run DocTest for doc testing
