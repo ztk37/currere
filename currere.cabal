@@ -26,6 +26,7 @@ source-repository head
 library
   exposed-modules:
       Currere
+      Currere.Monad
       Currere.Prelude
       Currere.Run
       Currere.Types
@@ -35,6 +36,7 @@ library
       lib
   build-depends:
       base >=4.7 && <5
+    , mtl
   default-language: Haskell2010
 
 executable currere-exe
@@ -47,6 +49,7 @@ executable currere-exe
   build-depends:
       base >=4.7 && <5
     , currere
+    , mtl
   default-language: Haskell2010
 
 test-suite currere-test
@@ -60,4 +63,5 @@ test-suite currere-test
   build-depends:
       base >=4.7 && <5
     , currere
+    , mtl
   default-language: Haskell2010
