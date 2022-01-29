@@ -5,8 +5,12 @@ module Currere.Run
 
 import System.Environment (getArgs)
 
+import Currere.Monad
+
 mainWithArgs :: [String] -> IO ()
-mainWithArgs = print
+mainWithArgs args = flip runCurrereM Ctx $ do
+  env <- askCtx
+  liftCurrereM $ print env
 
 defaultMain :: IO ()
 defaultMain = getArgs >>= mainWithArgs
